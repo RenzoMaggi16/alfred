@@ -519,7 +519,16 @@ footer {
     transform: translateY(0);
 }
 
-/* Estilos para la animación GooeyText */
+/* Hacer que el botón de Fase 1 siempre sea visible en móviles */
+@media (max-width: 768px) {
+    .level-card.featured .level-button {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+
 .intro-animation {
     height: 100vh;
     width: 100%;

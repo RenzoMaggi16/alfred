@@ -258,6 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fase1Price = document.getElementById('fase1-price');
     const fase1Period = document.getElementById('fase1-period');
     const fase1Link = document.getElementById('fase1-link');
+    const popularBadge = document.querySelector('.popular-badge'); // Añadir esta línea
     
     // Configuración de precios y enlaces
     const pricingConfig = {
@@ -279,6 +280,15 @@ document.addEventListener('DOMContentLoaded', () => {
             fase1Price.textContent = pricingConfig[planType].price;
             fase1Period.textContent = pricingConfig[planType].period;
             fase1Link.href = pricingConfig[planType].link;
+            
+            // Controlar la visibilidad del popular-badge
+            if (popularBadge) {
+                if (planType === 'anual') {
+                    popularBadge.style.display = 'none';
+                } else {
+                    popularBadge.style.display = 'block';
+                }
+            }
         }
     }
     
