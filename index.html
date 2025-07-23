@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets_task_01k0mk46wkfpdbemb4fv9r13jm_1753037962_img_0.webp" type="image/x-icon">
+    <title>Alfred - Asistente de Trading</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor para la animación de estrellas (siempre visible) -->
+    <div id="shooting-stars-container" class="shooting-stars-container">
+        <svg id="shooting-stars-svg" class="shooting-stars-svg">
+            <defs>
+                <linearGradient id="star-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2EB9DF" stop-opacity="0" />
+                    <stop offset="100%" stop-color="#9E00FF" stop-opacity="1" />
+                </linearGradient>
+            </defs>ñ´ç
+            <!-- Las estrellas se añadirán dinámicamente aquí -->
+        </svg>
+    </div>
+
+    <!-- Contenedor de la animación GooeyText -->
+    <div id="intro-animation" class="intro-animation">
+        <svg class="filter-svg" aria-hidden="true" focusable="false">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix
+                        in="SourceGraphic"
+                        type="matrix"
+                        values="1 0 0 0 0
+                                0 1 0 0 0
+                                0 0 1 0 0
+                                0 0 0 255 -140"
+                    />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gooey-container">
+            <span id="text1" class="gooey-text"></span>
+            <span id="text2" class="gooey-text"></span>
+        </div>
+    </div>
+
+    <!-- Contenido principal (inicialmente oculto) -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <nav>
+                <div class="logo">Alfred</div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#benefits">Beneficios</a></li>
+                    <li><a href="#levels">Fases</a></li>
+                    <li><a href="https://wa.link/ztxn7d">Obtener</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero" class="hero-section">
+                <div class="hero-content">
+                    <h1>Tu Asistente de Trading IA en WhatsApp</h1>
+                    <p>Alfred registra y analiza tus sesiones, detecta patrones, te envía resúmenes y recordatorios, y te motiva a mantener la disciplina para mejorar tu trading.</p>
+                    <a target="_blank" href="https://wa.link/ztxn7d"><button class="cta-button">Probar a Alfred</button></a>
+                </div>
+            </section>
+
+            <section id="benefits" class="benefits-section">
+                <h2>¿Por qué Alfred?</h2>
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <h3>Ahorra Tiempo</h3>
+                        <p>Automatiza el registro de tus operaciones y análisis.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Registro Preciso</h3>
+                        <p>Alfred interpreta tus descripciones y las guarda en tu journal.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Evolución Constante</h3>
+                        <p>Nuevas funciones en desarrollo para potenciar tu trading.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="levels" class="levels-section">
+                <h2>Fases de Alfred</h2>
+                <p class="section-subtitle">Elige el plan que mejor se adapte a tus necesidades</p>
+                
+                <div class="pricing-toggle">
+                    <span class="toggle-option active">Mensual</span>
+                    <span class="toggle-option">Anual</span>
+                    <span class="save-badge">Ahorra 15%</span>
+                </div>
+                
+                <div class="level-grid">
+                    <div class="level-card">
+                        <div class="card-header">
+                            <h3>Fase 2</h3>
+                            <p class="card-subtitle">Ecosistema</p>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">Proximamente</span>
+                        </div>
+                        <p class="card-description">Mejor razonamiento y mayor integracion con plataformas</p>
+                        <ul class="features-list">
+                            <li>Integración con plataformas</li>
+                            <li>Análisis de entradas segun plan de accion</li>
+                            <li>Reportes personalizados</li>
+                            <li>Soporte personalizado</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="level-card featured">
+                        <div class="popular-badge">-50%</div>
+                        <div class="card-header">
+                            <h3>Fase 1</h3>
+                            <p class="card-subtitle">Asistente Inteligente</p>
+                        </div>
+                        <div class="card-price">
+                            <span class="price" id="fase1-price">10 US$</span>
+                            <span class="price-period" id="fase1-period"><strong>Primer mes,</strong> luego US$20 mensuales</span>
+                        </div>
+                        <p class="card-description">Ahorro de tiempo y facilidad</p>
+                        <ul class="features-list">
+                            <li>Agenda y registra tus sesiones</li>
+                            <li>Recordatorios personalizados</li>
+                            <li>Integracion con Discord</li>
+                            <li>Personalizable</li>
+                            <li>Soporte basico</li>
+                        </ul>
+                        <a target="_blank" href="https://wa.link/ztxn7d" id="fase1-link" class="cta-button level-button">Obtener</a>
+                    </div>
+                    
+                    <div class="level-card">
+                        <div class="card-header">
+                            <h3>Fase 3</h3>
+                            <p class="card-subtitle">Lo más completo</p>
+                        </div>
+                        <div class="card-price">
+                            <span class="price">Proximamente</span>
+
+                        </div>
+                        <p class="card-description">Para traders profesionales</p>
+                        <ul class="features-list">
+                            <li>Bot de trading automatizado</li>
+                            <li>Integración con APIs</li>
+                            <li>Panel de trading integrado con tu Journal</li>
+                            <li>Comandos hacia plataformas via WhatsApp</li>
+                            <li>Soporte completo</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section id="cta" class="final-cta-section">
+                <h2>Lleva tu Trading al Siguiente Nivel</h2>
+                <p>Únete a la revolución del trading con inteligencia artificial.</p>
+                <a target="_blank" href="https://wa.link/ztxn7d"><button class="cta-button">Obtener a Alfred</button></a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Alfred. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

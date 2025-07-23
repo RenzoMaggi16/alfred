@@ -1,0 +1,592 @@
+/* General Styles */
+:root {
+    --primary-color: #040014; /* Gris grafito */
+    --secondary-background-color: #080029; /* Negro profundo para fondo */
+    --accent-color: #140066; /* Azul oscuro elegante */
+    --detail-color: #B0B0B0; /* Plateado suave para iconos o bordes */
+    --text-color-primary: #FFFFFF; /* Blanco puro */
+    --text-color-secondary: #D9D9D9; /* Gris claro para descripciones */
+    --card-bg: #080029; /* Slightly lighter dark for cards (keeping for now, can be adjusted) */
+    --border-color: #080029; /* Keeping for now, can be adjusted */
+    --barrita: #1D008F;
+}
+::selection {
+  background: #100052;  /* Color de fondo del texto seleccionado */
+  color: #BEADFF;       /* Color del texto cuando está seleccionado */
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color-primary);
+    margin: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: var(--text-color-primary);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+/* Header & Navigation */
+header {
+     /* Using primary-color with transparency */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--text-color-secondary);
+    font-weight: 500;
+    font-size: 1.05em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-color-primary);
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Offset for fixed header */
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-background-color) 100%);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    color: var(--text-color-secondary);
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: rgba(20, 0, 102, 0.692); /* A slightly darker shade of accent-color */
+    transform: translateY(-2px);
+}
+#benefits {
+    padding: 100px 0;
+}	
+/* Section Styling */
+section {
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.8em;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--barrita);
+    border-radius: 2px;
+}
+
+/* Benefits Section */
+.benefits-section {
+    background-color: var(--secondary-background-color);
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    background-color: var(--primary-color);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.8s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px 5px #1D008F
+}
+
+.benefit-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: var(--text-color-primary);
+}
+
+
+.benefit-item p {
+    color: var(--text-color-secondary);
+    font-size: 1.1em;
+}
+
+#levels {
+    padding: 100px 0;
+}
+/* Levels Section - Nuevo diseño */
+.levels-section {
+    background: linear-gradient(180deg, var(--secondary-background-color) 0%, var(--primary-color) 10%, var(--primary-color) 95%, var(--secondary-background-color) 100%);
+    position: relative;
+    padding: 100px 0;
+    margin: 50px 0;
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    color: var(--text-color-secondary);
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+.pricing-toggle {
+    display: inline-flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 5px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.toggle-option {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.toggle-option.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.save-badge {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 0.8em;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.level-card {
+    background-color: var(--secondary-background-color);
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.level-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.level-card.featured {
+    border: 2px solid var(--accent-color);
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.level-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.card-header {
+    padding: 30px 30px 15px;
+}
+
+.level-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    color: var(--text-color-primary);
+}
+
+.card-subtitle {
+    color: var(--text-color-secondary);
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card-price {
+    padding: 0 30px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--text-color-primary);
+}
+
+.price-period {
+    display: block;
+    font-size: 0.9em;
+    color: var(--text-color-secondary);
+    margin-top: 5px;
+}
+
+.card-description {
+    padding: 0 30px;
+    color: var(--text-color-secondary);
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0 30px;
+    margin: 0 0 30px;
+    flex-grow: 1;
+}
+
+.features-list li {
+    padding: 10px 0;
+    color: var(--text-color-secondary);
+    position: relative;
+    padding-left: 25px;
+}
+
+.features-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+
+.level-button {
+    margin: 0 auto 30px;
+    width: calc(50% - 40px);
+    text-decoration: none;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    text-decoration: none;
+}
+/* Solo mostrar el botón de Fase 1 (destacado) cuando se hace hover */
+.level-card.featured:hover .level-button {
+    display: inline-block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .level-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .level-card.featured {
+        transform: scale(1);
+    }
+    
+    .level-card.featured:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .level-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .pricing-toggle {
+        margin-bottom: 30px;
+    }
+}
+
+/* Final CTA Section */
+.final-cta-section {
+    background-color: var(--secondary-background-color);
+    padding: 80px 0;
+}
+
+.final-cta-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.final-cta-section p {
+    color: var(--text-color-secondary);
+    font-size: 1.3em;
+    margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-background-color);
+    color: var(--text-color-secondary);
+    border-top: 1px solid var(--detail-color);
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links on small screens for now, could add a hamburger menu */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    section h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .benefit-item, .level-card {
+        padding: 30px;
+    }
+
+    .benefit-item h3, .level-card h3 {
+        font-size: 1.5em;
+    }
+
+    .final-cta-section h2 {
+        font-size: 2.2em;
+    }
+
+    .final-cta-section p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .benefit-grid, .level-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Botón en tarjetas de nivel */
+.level-button {
+    opacity: 0;
+    margin-top: 20px;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.5s ease;
+}
+
+.level-card:hover .level-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para la animación GooeyText */
+.intro-animation {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+
+.filter-svg {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.gooey-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: url(#threshold);
+    position: relative;
+    height: 200px;
+}
+
+.gooey-text {
+    position: absolute;
+    display: inline-block;
+    font-size: 60pt;
+    font-weight: bold;
+    color: var(--text-color-primary);
+    text-align: center;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .gooey-text {
+        font-size: 40pt;
+    }
+}
+
+@media (max-width: 480px) {
+    .gooey-text {
+        font-size: 30pt;
+    }
+}
+
+/* Estilos para la animación de estrellas */
+.shooting-stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Detrás de todo el contenido */
+    pointer-events: none; /* No interfiere con los clics */
+    overflow: hidden;
+}
+
+.shooting-stars-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
