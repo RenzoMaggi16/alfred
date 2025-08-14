@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configuración de precios y enlaces
     const pricingConfig = {
         mensual: {
-            price: '17 US$',
+            price: 'Gratis',
             period: 'Por mes/usuario',
             link: 'https://link-mensual.com'
         },
